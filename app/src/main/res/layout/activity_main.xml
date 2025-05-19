@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+    <TextView
+        android:hint="Quantity:"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:background="#B19CD9"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/button_moins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/black"
+            android:backgroundTint="#B18"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/textView_quantity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:hint="0"/>
+
+        <Button
+            android:id="@+id/button_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textColor="@color/black"
+            android:backgroundTint="#B18"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:hint="Price:"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:background="#B19CD9"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/textView_prix"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="30sp"
+        android:hint="Total : 0"
+        android:layout_marginBottom="20dp">
+
+    </TextView>
+    <Button
+        android:id="@+id/button_order"
+        android:hint="ORDER:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:backgroundTint="#B18"
+        android:textSize="30sp"
+        android:layout_marginBottom="30dp"
+        />
+</LinearLayout>
