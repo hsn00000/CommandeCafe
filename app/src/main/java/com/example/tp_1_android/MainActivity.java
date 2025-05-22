@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Instanciation de l'objet CoffeeOrder
-        addCoffeeButton = findViewById(R.id.button_moins);
-        removeCoffeeButton = findViewById(R.id.button_plus);
+        addCoffeeButton = findViewById(R.id.button_plus);
+        removeCoffeeButton = findViewById(R.id.button_moins);
         quantityTextView = findViewById(R.id.textView_quantity);
         priceTextView = findViewById(R.id.textView_prix);
         orderButton = findViewById(R.id.button_order);
@@ -46,9 +46,34 @@ public class MainActivity extends AppCompatActivity {
         addCoffeeButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+
                 coffeeOrder.addCoffee();
+                quantityTextView.setText(String.valueOf(coffeeOrder.getQuantity()));
+
                 }
         });
+
+        removeCoffeeButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+
+                coffeeOrder.removeCoffee();
+                quantityTextView.setText(String.valueOf(coffeeOrder.getQuantity()));
+
+            }
+        });
+
+        orderButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+
+                double totalPrice = coffeeOrder.CalculateOrderPrice();
+                priceTextView.setText(String.valueOf(totalPrice));
+
+            }
+        });
+
+
 
 
 
