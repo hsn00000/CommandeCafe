@@ -65,16 +65,22 @@
     <TextView
         android:id="@+id/textView_prix"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:textSize="30sp"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
         android:hint="Total : 0"
         android:layout_marginBottom="20dp">
 
     </TextView>
+
+    <Spinner
+        android:id="@+id/spinner_orders"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"/>
+
     <Button
         android:id="@+id/button_order"
-        android:hint="ORDER:"
+        android:hint="VALIDER:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
