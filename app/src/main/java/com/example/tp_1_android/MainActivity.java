@@ -40,15 +40,14 @@ public class MainActivity extends AppCompatActivity {
         priceTextView = findViewById(R.id.textView_prix);
         orderButton = findViewById(R.id.button_order);
 
+        coffeeOrder = new CoffeeOrder(0, 2.5); // 2.5 est le prix d'un café
 
-        button1.setOnClickListener(new View.OnClickListener(){
+
+        addCoffeeButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                anOrder.addCoffee();
-                int number = anOrder.getQuantity();
-                display(number);
+                coffeeOrder.addCoffee();
                 }
-            }
         });
 
 
